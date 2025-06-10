@@ -241,6 +241,7 @@ bindsym $mod+c exec --no-startup-id $HOME/.local/opt/ChatGPT-linux-x64/ChatGPT
 bindsym $mod+shift+d exec --no-startup-id discord
 # Terminal
 bindsym $mod+Return exec --no-startup-id kitty;focus
+bindsym $mod+shift+Return exec --no-startup-id alacritty;focus
 bindsym F12 exec --no-startup-id xfce4-terminal --drop-down; focus
 # System monitor
 bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
@@ -318,8 +319,8 @@ for_window [class="Termite"] focus
 for_window [class="Terminator"] focus
 
 ## audio settings ##
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '1%+'"
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '1%-'"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '2%+'"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '2%-'"
 bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
 #https://github.com/acrisci/playerctl/
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
