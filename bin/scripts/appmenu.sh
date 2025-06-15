@@ -6,7 +6,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# Application launcher using Rofi - updated 05/16/2025
+# Application launcher using Rofi - updated 06/14/2025
 # ~/bin/scripts/xmenudm.sh
 
 DMENU="rofi -dmenu -i -matching fuzzy -sorting-method fzf -theme ~/.config/rofi/themes/appmenu.rasi"
@@ -86,22 +86,23 @@ Zsh Aliases\n\
 Back\n" | $DMENU)
 
     case "$choice" in 
-        "Alacritty") exec kitty -e ~/bin/scripts/run_scripts/alacrittyrc ;;
-        "App Menu") exec kitty -e ~/bin/scripts/run_scripts/appmenurc ;;
-        "Bashrc") exec kitty -e ~/bin/scripts/run_scripts/barc ;;
-        "Hyprland") exec kitty -e ~/bin/scripts/run_scripts/hyprrc ;;
-        "I3") exec kitty -e ~/bin/scripts/run_scripts/i3rc ;;
-        "Imwheel") exec kitty -e ~/bin/scripts/run_scripts/imwheelrc ;;
-        "Kitty") exec kitty -e ~/bin/scripts/run_scripts/kittyrc ;;
-        "NeoVim") exec kitty -e ~/bin/scripts/run_scripts/nvimrc ;;
-        "Picom") exec kitty -e ~/bin/scripts/run_scripts/picomrc ;;
-        "Polybar") exec kitty -e ~/bin/scripts/run_scripts/pbrc ;;
-        "Qtile") exec kitty -e ~/bin/scripts/run_scripts/qtilerc ;;
-        "Vimrc") exec kitty -e ~/bin/scripts/run_scripts/vimrc ;;
-        "Xfce") exec kitty -e ~/bin/scripts/run_scripts/xfcerc ;;
-        "Xmenu") exec kitty -e ~/bin/scripts/run_scripts/xmenurc ;;
-        "Zsh") exec kitty -e ~/bin/scripts/run_scripts/zshrc ;;
-        "Zsh Aliases") exec kitty -e ~/bin/scripts/run_scripts/aliasrc ;;
+        "Alacritty") exec kitty -e ~/bin/scripts/run_scripts/edit_alacritty.sh ;;
+        "App Menu") exec kitty -e ~/bin/scripts/run_scripts/edit_appmenu.sh ;;
+        "Bashrc") exec kitty -e ~/bin/scripts/run_scripts/edit_bashrc.sh ;;
+        "I3") exec kitty -e ~/bin/scripts/run_scripts/edit_i3.sh ;;
+        "Imwheel") exec kitty -e ~/bin/scripts/run_scripts/edit_imwheel.sh ;;
+        "Kitty") exec kitty -e ~/bin/scripts/run_scripts/edit_kitty.sh ;;
+        "NeoVim") exec kitty -e ~/bin/scripts/run_scripts/edit_nvim.sh ;;
+        "Picom") exec kitty -e ~/bin/scripts/run_scripts/edit_picom.sh ;;
+        "Polybar") exec kitty -e ~/bin/scripts/run_scripts/edit_polybar.sh ;;
+        "Qtile") exec kitty -e ~/bin/scripts/run_scripts/edit_qtile.sh ;;
+        "Vimrc") exec kitty -e ~/bin/scripts/run_scripts/edit_vim.sh ;;
+        "Xfce") exec kitty -e ~/bin/scripts/run_scripts/edit_xfce.sh ;;
+        "Xmenu") exec kitty -e ~/bin/scripts/run_scripts/edit_xmenu.sh ;;
+        "Zsh") exec kitty -e ~/bin/scripts/run_scripts/edit_zsh.sh ;;
+        "Zsh Aliases") exec kitty -e ~/bin/scripts/run_scripts/edit_zsh_aliases.sh ;;
+        "Back") exec "$0" ;;
+#        "Hyprland") exec kitty -e ~/bin/scripts/run_scripts/hyprrc ;;
         "Back") exec "$0" ;;
     esac
     ;;
