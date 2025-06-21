@@ -6,7 +6,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# Application launcher using Rofi - updated 06/15/2025
+# Application launcher using Rofi - updated 06/20/2025
 # ~/bin/scripts/xmenudm.sh
 
 DMENU="rofi -dmenu -i -matching fuzzy -sorting-method fzf -theme ~/.config/rofi/themes/appmenu.rasi"
@@ -88,6 +88,7 @@ Back\n" | $DMENU)
         "Alacritty") exec kitty -e ~/bin/scripts/edit_scripts/edit_alacritty.sh ;;
         "App Menu") exec kitty -e ~/bin/scripts/edit_scripts/edit_appmenu.sh ;;
         "Bashrc") exec kitty -e ~/bin/scripts/edit_scripts/edit_bashrc.sh ;;
+        "Hyprland") exec kitty -e ~/bin/scripts/edit_scripts/edit_hyprland.sh ;;
         "I3") exec kitty -e ~/bin/scripts/edit_scripts/edit_i3.sh ;;
         "Kitty") exec kitty -e ~/bin/scripts/edit_scripts/edit_kitty.sh ;;
         "NeoVim") exec kitty -e ~/bin/scripts/edit_scripts/edit_nvim.sh ;;
@@ -191,10 +192,12 @@ Back\n" | $DMENU)
     "Web / Email")
         choice=$(printf "Brave\n\
 Discord\n\
+Zen Browser\n\
 Back\n" | $DMENU)
         case "$choice" in 
             "Brave") exec brave ;;
             "Discord") exec discord ;;
+            "Zen Browser") exec /usr/bin/zen-browser ;;
             "Back") exec "$0" ;;
         esac
         ;;
