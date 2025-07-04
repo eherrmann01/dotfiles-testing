@@ -5,7 +5,7 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_   
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)  
 
-# i3 configuration file for erik-e6530 - updated 06/21/2025
+# i3 configuration file for erik-e6530 - updated 07/04/2025
 # ~/.config/i3/config
 
 ## set Super key ##
@@ -192,7 +192,11 @@ font pango:Noto Mono Regular 13
 # set volume balance
 exec_always --no-startup-id pactl set-sink-volume 0 60% 50%
 
-#Start Nitrogen
+# Dropbox
+exec_always --no-startup-id snixembed &
+exec --no-startup-id dropbox start &
+
+# Start Nitrogen
 exec --no-startup-id i3-msg exec 'nitrogen --restore'
 
 #Start Barrier - EDH
@@ -258,6 +262,8 @@ bindsym control+mod1+a exec --no-startup-id xfce4-appfinder
 bindsym --release $mod+Escape exec xkill
 
 ## Erik's custom keyboard shortcuts ##
+# Keepass
+bindsym control+shift+k exec --no-startup-id /usr/bin/keepassxc
 # Firefox
 bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;focus
 # Grayjay YouTobe viewer
@@ -354,7 +360,7 @@ new_float normal
 ## i3 gaps ##
 # Settings for I3 next gap git
 # https://github.com/Airblader/i3/tree/gaps-next
-for_window [class="^.*"] border pixel 0 #EDH
+for_window [class="^.*"] border pixel 0
 gaps inner 8
 gaps outer 5
 #smart_gaps on
