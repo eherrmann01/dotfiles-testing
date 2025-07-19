@@ -6,8 +6,8 @@
 # | |____| |  | |   <  | |__| |  | |  | |  __/ |  | |  | | | | | | (_| | | | | | | |  ____) | |_
 # |______|_|  |_|_|\_\ |_____(_) |_|  |_|\___|_|  |_|  |_| |_| |_|\__,_|_| |_|_| |_| |_____/|_(_)
 
-# Application launcher using Rofi - updated 06/20/2025
-# ~/bin/scripts/xmenudm.sh
+# Application launcher using Rofi - updated 07/19/2025
+# ~/bin/scripts/appmenu.sh
 
 DMENU="rofi -dmenu -i -matching fuzzy -sorting-method fzf -theme ~/.config/rofi/themes/appmenu.rasi"
 
@@ -156,10 +156,11 @@ Flameshot\n\
 Gparted\n\
 HTOP\n\
 LXAppearance\n\
+Nitrogen\n\
+Pacseek\n\
+QT Theme Manager\n\
 Timeshift\n\
 Tweaks\n\
-Nitrogen\n\
-QT Theme Manager\n\
 Back\n" | $DMENU )
         case "$choice" in 
             "Barrier") exec barrier ;;
@@ -170,10 +171,12 @@ Back\n" | $DMENU )
             "Gparted") exec gparted ;;
             "HTOP") exec kitty -e htop ;;
             "LXAppearance") exec lxappearance ;;
+            "Nitrogen") exec nitrogen ;;
+            "Pacseek") kitty -e ~/bin/scripts/pacseek_search.sh ;;
+            "QT Theme Manager") exec qt5ct ;;
+            "QT Theme Manager") exec qt5ct ;;
             "Timeshift") exec timeshift-launcher ;;
             "Tweaks") exec archlinux-tweak-tool ;;
-            "Nitrogen") exec nitrogen ;;
-            "QT Theme Manager") exec qt5ct ;;
             "Back") exec "$0" ;;
         esac
         ;;

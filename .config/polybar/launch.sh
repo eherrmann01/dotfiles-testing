@@ -15,4 +15,3 @@ while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
     MONITOR=$m polybar --reload mainbar-i3 &
 done
 
- esac
