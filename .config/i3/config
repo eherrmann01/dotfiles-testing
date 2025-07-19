@@ -269,8 +269,8 @@ bindsym $mod+F1 exec --no-startup-id exo-open --launch webbrowser;focus
 # Grayjay YouTobe viewer
 bindsym $mod+g exec --no-startup-id grayjay;focus
 # Web Browsers
-bindsym $mod+F3 exec --no-startup-id brave;focus
-bindsym $mod+w exec --no-startup-id zen-browser;focus
+bindsym $mod+F3 exec --no-startup-id zen-browser;focus
+bindsym $mod+w exec --no-startup-id brave;focus
 # Thunar
 bindsym $mod+F2 exec --no-startup-id thunar;focus
 # Ranger terminal file browser
